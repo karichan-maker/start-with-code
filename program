@@ -1,1 +1,34 @@
 
+//program for colect the information of n students
+#include<stdio.h>
+struct student{
+
+    char name[40];
+    int roll;
+    char add[40];
+
+};
+
+int main(){
+
+    int n,i;
+    struct student s[100];
+    printf("enter the number of student ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        printf("Enter the name of student [%d]",i+1);
+       scanf("%s",s[i].name);
+    printf("enter the roll [%d]",i+1);
+     scanf("\n%d",&s[i].roll);
+    printf("Enter the address [%d]",i+1);
+    scanf("%s",s[i].add);
+    }
+    printf("\nthe information of student");
+    for(i=0;i<n;i++){
+    printf("the name of [%d] student is %s\n",i+1,s[i].name);
+    printf("the roll number of[%d] stuent is %d\n",i+1,s[i].roll);
+    printf("the address of student[%d] is %s\n",i+1,s[i].add);
+}
+return 0;
+
+}
